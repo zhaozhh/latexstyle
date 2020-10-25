@@ -1,0 +1,256 @@
+\usepackage{media9}%动画
+\usepackage{setspace}
+\usepackage{ulem}%下划线
+\usepackage{animate}
+\usepackage{pgfplots}
+\usepackage{amsmath,graphicx,wrapfig,picins,stmaryrd}
+\usepackage{amsfonts,mathrsfs,bm,bookmark,amssymb}
+\usepackage{multicol,fancybox}
+\usepackage[listings,theorems]{tcolorbox}
+\usepackage[english]{babel}
+\usepackage{multirow}
+\usepackage{bibentry}
+\usepackage{esint}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{enumitem}
+%\setlist[enumerate,1]{label=\arabic*).,font=\textup,
+% leftmargin=7mm,labelsep=1.5mm,topsep=0mm,itemsep=0mm}
+% \setlist[enumerate,2]{label=\alph*).,font=\textup, 
+% leftmargin=7mm,labelsep=1.5mm,topsep=-0.8mm,itemsep=0mm}
+\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\tcbuselibrary{most}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[slantfont,boldfont]{xeCJK} % 允许斜体和粗体
+%\setCJKmainfont{Source Han Sans CN Regular}%思源黑体
+\setCJKmainfont{Source Han Sans CN Normal}%思源黑体
+%\setCJKmainfont{Source Han Sans CN Bold}%思源黑体
+%\setCJKmainfont{Source Han Sans CN Medium}%思源黑体
+%\setCJKmainfont{Source Han Serif CN Regular}%思源宋体
+%\setCJKmainfont{Source Han Serif CN SemiBold}%思源宋体
+%\setCJKmainfont{Source Han Serif CN Light}%思源宋体
+%\setCJKmainfont{Source Han Serif CN Medium}%思源宋体
+%\setCJKmainfont{Microsoft YaHei UI}%微软雅黑
+%\setCJKmainfont{Microsoft YaHei UI Light}%微软雅黑
+
+%\setCJKmainfont{Heiti SC Light}   % 设置缺省中文字体
+%\setCJKsansfont{SimHei}
+%\setCJKmonofont{SimSun}   % 设置等宽字体
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------自定义的微分符号-----------------------------
+
+\newcommand {\ddj}{\textrm{\dj}}
+\newcommand {\dd}{\textrm{d}}
+\newcommand {\Arg}{\textrm{Arg}}
+\newcommand {\sh}{\textrm{sh}}
+\newcommand {\ch}{\textrm{ch}}
+
+\newcommand\ii{\textrm{i}}
+\newcommand\ee{\textrm{e}}
+\newcommand\red[1]{{\color{red} #1}}
+\newcommand\blue[1]{{\color{blue} #1}}
+\newtheorem{thm}{定理}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamersize{text margin left=2.5em,text margin right=2.5em}%设置左右边界宽度
+\setbeamertemplate{enumerate items}[default] %让编号恢复默认
+\setbeamertemplate{frametitle}%调整标题栏的大小
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.4cm,ht=1.6em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut
+        \vskip-1.4ex%
+    \end{beamercolorbox}
+}
+%---------------------------------------------------------------------------------
+%\setbeamercovered{transparent} %使不显示的部分变得透明
+
+% 改变 footnote 的字体大小
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{caption}{size=\scriptsize}%调整标题的字号
+
+\linespread{1}%行间距为x倍
+\setlength{\parskip}{0.5\baselineskip}%段间距
+%\setlength{\abovedisplayskip}{3 cm}
+%\setlength{\belowdisplayskip}{0.1\baselineskip}
+%\usetikzlibrary{tikzmark}
+%\usetikzlibrary{shapes.geometric}
+
+%%%%%%%-----tikz设定-------%%%%%%%%%%%%%%
+\usetikzlibrary{chains}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc} %当需要对坐标进行计算时
+\usetikzlibrary{arrows,shapes,positioning}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{spy}
+
+\tikzstyle arrowstyle=[scale=1]
+\tikzstyle directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[arrowstyle]{stealth}}}}]
+\tikzstyle reverse directed=[postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrowreversed[arrowstyle]{stealth};}}}]
+%
+\pgfplotsset{compat=1.12}
+\tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
+
+\usetikzlibrary{positioning}
+\tikzset{>=stealth}
+ \usepackage{pgfplotstable}
+\usepgfplotslibrary{external}
+\newcommand{\tikzmark}[3][]
+  {\tikz[remember picture, baseline]
+    \node [anchor=base,#1](#2) {#3};
+ }
+
+%\tikzset{
+%    every overlay node/.style={
+%        baseline=default,draw=black,fill=white,rounded corners,anchor=north west,
+%    },
+%}
+%
+%\def\tikzoverlay{%
+%    \tikzexternaldisable
+%    \tikz[baseline,overlay]\node[every overlay node,/utils/exec=\tikzexternalenable]
+%}%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usecolortheme[overlystylish]{albatross}%使整个背景为蓝色
+\setbeamercolor{frametitle}{fg=black,bg=lightblue}
+%使背景变为黑色
+%\setbeamercolor{normal text}{fg=white,bg=black!90}
+%\setbeamercolor{structure}{fg=white}
+%
+%\setbeamercolor{alerted text}{fg=red!85!black}
+%
+%\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+%
+%\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+%\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+%\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+%\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+%
+%\setbeamercolor*{framesubtitle}{fg=white}
+%
+%\setbeamercolor*{block title}{parent=structure,bg=black!60}
+%\setbeamercolor*{block body}{fg=black,bg=black!10}
+%\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+%\setbeamercolor*{block title example}{parent=example text,bg=black!15}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usecolortheme{lily}%和albatross主题合用，以消除标题背景色
+%\setbeamertemplate{navigation symbols}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usefonttheme{professionalfonts}
+%
+%\usetheme[
+%	bullet=circle,		% Other option: square
+%	%bigpagenumber,		% circled page number on lower right
+%	topline=false%topline=true,		% colored bar at the top of the frame
+%	]{Zurich}
+%\usefonttheme[onlymath]{serif}%改变数学公式的字体
+%\def\mathfamilydefault{\rmdefault}%改变数学公式的字体
+
+
+
+%\setCJKmainfont{Microsoft YaHei}   % 设置缺省中文字体
+%\setCJKmainfont[BoldFont={STHeiti},ItalicFont=STKaiti]{STHeiti}
+%\setCJKsansfont{STHeiti}
+%\setCJKmonofont{STSong}
+
+%\setCJKfamilyfont{zhsong}{STSong}
+%\setCJKfamilyfont{mhei}{Source Han Sans SC Heavy}
+\setCJKfamilyfont{mhei}{Source Han Sans CN Bold}
+%\setCJKfamilyfont{zhkai}{STKaiti}
+%\setCJKfamilyfont{zhfs}{STFangsong}
+%\setCJKfamilyfont{zhli}{LiSu}
+%\setCJKfamilyfont{zhyou}{YouYuan}
+%
+%\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{mhei}}   % 黑体
+%\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+%\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+%\newcommand*{\lishu}{\CJKfamily{zhli}}    % 隶书
+%\newcommand*{\youyuan}{\CJKfamily{zhyou}} % 幼圆
+
+%\setmainfont{Times New Roman}    % 缺省字体
+%\setCJKfamilyfont{song}{SimSun}
+%\setCJKfamilyfont{hei}{{Source Han Sans SC Heavy}
+\setCJKfamilyfont{kai}{KaiTi}
+%\setCJKfamilyfont{fs}{FangSong}
+%\setCJKfamilyfont{li}{LiSu}
+%\setCJKfamilyfont{you}{YouYuan}
+%\setCJKfamilyfont{yahei}{Microsoft YaHei}
+%\setCJKfamilyfont{xingkai}{STXingkai}
+%\setCJKfamilyfont{xinwei}{STXinwei}
+%\setCJKfamilyfont{fzyao}{FZYaoTi}
+%\setCJKfamilyfont{fzshu}{FZShuTi}
+%%-------------------------------------------------------------------
+%\newCJKfontfamily\song{SimSun}
+\newCJKfontfamily\hei{SimHei}
+\newCJKfontfamily\kai{KaiTi}
+%\newCJKfontfamily\fs{FangSong}
+%\newCJKfontfamily\li{LiSu}
+%\newCJKfontfamily\you{YouYuan}
+%\newCJKfontfamily\yahei{Microsoft YaHei}
+%\newCJKfontfamily\xingkai{STXingkai}
+%\newCJKfontfamily\xinwei{STXinwei}
+%\newCJKfontfamily\fzyao{FZYaoTi}
+%\newCJKfontfamily\fzshu{FZShuTi}
+%-----------------------------------------------------------定义颜色---------------
+\definecolor{blueblack}{cmyk}{0,0,0,0.35}%浅黑
+\definecolor{darkblue}{cmyk}{1,0,0,0}%纯蓝
+\definecolor{lightblue}{cmyk}{0.15,0,0,0}%浅蓝
+%---------------------------------------------------------------------------------
+
+
+\setbeamerfont{frametitle}{family=\heiti}
+
+
+
+
+\newtcolorbox{mytcbluebox}[1][]{colframe = darkblue, colback = blue!40!black, coltext=white,#1}
+\newtcolorbox{mybluebox}[1][]{colframe = darkblue, colback = blue!40!black, coltext=white,#1}
+\newtcolorbox{mycyanbox}[1][]{colframe =  cyan!50, colback = cyan!30,fonttitle =\sanhao ,  coltext=black,coltitle = black,  #1}
+
+\newtcbox{\mybox}[1][red]
+  {on line, 
+  %arc = 0pt, outer arc = 0pt,
+    colback = #1!10!white, colframe = #1!50!black,
+    boxsep = 0pt, left = 1pt, right = 1pt, top = 2pt, bottom = 2pt,
+    boxrule = 0pt, bottomrule = 1pt, toprule = 1pt}
+
+
+
+
+%---------------------------定义、定理环境-------------------------
+
+ \newtcbtheorem[number within=section]{defi}{定义}%
+  {beamer, coltitle=black, colbacktitle=cyan!50!white, colframe =  cyan!30!white,  colback = cyan!30!white  ,  fonttitle=\bfseries}{defi}
+
+ \newtcbtheorem[number within=section]{theo}{定理}%
+  {beamer, coltitle=black, colbacktitle=cyan!60!white, colframe =  cyan!30!white,  colback = cyan!30!white  ,  fonttitle=\bfseries}{theo}
+
+\newtcolorbox{notes}[2][]
+  {beamer, coltitle=black, colbacktitle=cyan!40!white, colframe =  cyan!20!white,  colback = cyan!20!white  ,  fonttitle=\bfseries, title=#2, #1}
+\newtcolorbox{criterion}[2][]
+  {beamer, coltitle=black, colbacktitle=cyan!60!white, colframe =  cyan!30!white,  colback = cyan!30!white  ,  fonttitle=\bfseries, title=#2, #1}
+
+
+
+
+
+\newcounter{myDefinition}[section]\def\themyDefinition{\thesection.\arabic{myDefinition}}
+\newcounter{myTheorem}[section]\def\themyTheorem{\thesection.\arabic{myTheorem}}
+\newcounter{myCorollary}[section]\def\themyCorollary{\thesection.\arabic{myCorollary}}
+
+%\tcbmaketheorem{defi}{定义}{fonttitle=\bfseries, colback=lightblue,colframe=darkblue}{myDefinition}{Definition}
+%\tcbmaketheorem{theo}{定理}{fonttitle=\bfseries\upshape, fontupper=\slshape, arc=0mm, colback=lightblue,colframe=darkblue}{myTheorem}{Theorem}
+\tcbmaketheorem{coro}{推论}{fonttitle=\bfseries\upshape, fontupper=\slshape, arc=0mm, colback=lightblue,colframe=darkblue}{myCorollary}{Corollary}
+%------------------------------------------------------------------------------
